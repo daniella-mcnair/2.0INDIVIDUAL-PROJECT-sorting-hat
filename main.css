@@ -1,0 +1,24 @@
+.card {
+  margin-top: 30px;
+  text-align: center;
+  background-color: white;
+  border: 5px dotted black;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.card-img-top {
+  display: block;
+  padding-top: 20px;
+  margin-bottom: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 250px;
+  height: 250px;
+}
+
+body {
+  background-color: #204b63;;
+}
