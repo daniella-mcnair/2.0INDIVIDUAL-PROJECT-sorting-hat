@@ -7,16 +7,49 @@ const cards = [
   },
 ];
 
+const formApp = document.querySelector("#app");
+
+renderForm = () => {
+  let domstring = "";
+  domstring += 
+  `<div id = "app">
+    <div class="card2" style="width: 1500px; height: 1500px;">
+      <div class="card-body">
+        <form class="row g-3">
+          <div class="col-auto">
+            <label for="staticEmail2" class="visually-hidden">Student:</label>
+            <input type="text" readonly class="form-control-plaintext" id="staticEmail2" value="Student:">
+          </div>
+          <div class="col-auto">
+            <label for="inpuStudentName" class="visually-hidden">Name</label>
+            <input type="text" class="form-control" id="studentName" placeholder="Enter Name Here">
+          </div>
+          <div class="col-auto">
+            <button type="submit" class="btn btn-primary mb-3">Enroll!</button>
+          </div>
+        </form>
+      </div>
+    </div>`
+    formApp.innerHTML = domstring
+  
+}
 
 
 
 const hideCard = () => {
   const card = document.getElementById("card");
   card.style.display = "none";
-}
+  renderForm();
+
+};
 
 const startApp = document.querySelector(".startButton");
 startApp.addEventListener("click", hideCard);
+
+
+
+
+
 // const renderHomeCard = () => {
 //   const cardApp = document.querySelector("#card");
 //   let domstring = "";
