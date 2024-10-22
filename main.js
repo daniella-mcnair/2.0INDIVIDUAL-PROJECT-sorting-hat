@@ -5,6 +5,18 @@ const cards = [
     house: "Ravenclaw", 
     color: "blue",
   },
+  { id: "2",
+    imageUrl: "",
+    name: "Edward",
+    house: "Ravenclaw", 
+    color: "blue",
+  },
+  { id: "3",
+    imageUrl: "",
+    name: "Alice",
+    house: "Ravenclaw", 
+    color: "blue",
+  },
 ];
 
 const formApp = document.querySelector("#app");
@@ -13,7 +25,7 @@ renderForm = () => {
   let domstring = "";
   domstring += 
   `<div id = "app">
-    <div class="card2" style="width: 1500px; height: 1500px;">
+    <div class="card2" style="width: 1500px; height: 50px;">
       <div class="card-body">
         <form class="row g-3">
           <div class="col-auto">
@@ -25,10 +37,19 @@ renderForm = () => {
             <input type="text" class="form-control" id="studentName" placeholder="Enter Name Here">
           </div>
           <div class="col-auto">
-            <button type="submit" class="btn btn-primary mb-3">Enroll!</button>
+            <button type="submit" class="btn btn-primary mb-3">Enroll</button>
           </div>
-        </form>
       </div>
+        </form>
+    </div>
+    
+    <div id = "students">
+      <div class="card2">
+      </div>  
+      <div class="card2">
+      </div>  
+    </div>
+
     </div>`
     formApp.innerHTML = domstring
   
