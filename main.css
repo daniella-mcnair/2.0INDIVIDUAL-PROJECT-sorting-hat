@@ -11,7 +11,7 @@
 
 .card-img-top {
   display: block;
-  padding-top: 20px;
+  margin-top: 30px;
   margin-bottom: 5px;
   margin-left: auto;
   margin-right: auto;
@@ -19,6 +19,26 @@
   height: 250px;
 }
 
+.btn-primary {
+  background-color: #7D390E;
+}
+
 body {
-  background-color: #204b63;;
+  background-color: #204b63;
+  text-align: center;
+}
+
+form{
+  display: inline-block;
+}
+
+.card2 {
+  margin-top: 30px;
+  text-align: center;
+  background-color: white;
+  border: 5px dotted black;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 }
