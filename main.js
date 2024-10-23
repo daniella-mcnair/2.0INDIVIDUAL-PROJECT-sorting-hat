@@ -19,6 +19,7 @@ const cards = [
   },
 ];
 
+
 const formApp = document.querySelector("#app");
 
 renderForm = () => {
@@ -44,17 +45,69 @@ renderForm = () => {
     </div>
     
     <div id = "students">
-      <div class="card2">
-      </div>  
-      <div class="card2">
-      </div>  
-    </div>
+    <div id ="enrolled" class = "card2">
+    </div>  
+    <div id ="expelled" class = "card2">
+    </div>  
+  </div>
 
     </div>`
     formApp.innerHTML = domstring
+
+const studentContainer = document.querySelector("#enrolled");
+
+const renderStudents = () => {
+  let cardstring = "";
+  cards.forEach((card) => {
+    cardstring +=
+    `<div class="card" style="width: 150px;">
+      <div class="card-header">${card.name}</div>
+      <img src=${card.imageUrl} class="card-img-top" alt="${card.id}">
+      <div class="card-body">
+       <button type="button" id="delete--${card.id}" class="delete-button btn btn-danger">Delete</button>
+      </div>
+      <div class=${card.house} "card-footer" >${card.house}</div>
+      </div>`;
+  });
+
+  studentContainer.innerHTML = cardstring;
+
+
+};
+
+
+    
+renderStudents();
+
+
+const studentContainer2 = document.querySelector("#expelled");
+
+const renderExpelled = () => {
+  let expelstring = "";
+  cards.forEach((card) => {
+    expelstring +=
+    `<div class="card" style="width: 150px;">
+      <div class="card-header">${card.name}</div>
+      <img src=${card.imageUrl} class="card-img-top" alt="${card.id}">
+      <div class="card-body">
+       <button type="button" id="delete--${card.id}" class="delete-button btn btn-danger">Delete</button>
+      </div>
+      <div class=${card.house} "card-footer" >${card.house}</div>
+      </div>`;
+  });
+
+  studentContainer2.innerHTML = expelstring;
+
+
+};
+
+
+    
+renderExpelled();
+
+
   
 }
-
 
 
 const hideCard = () => {
@@ -63,6 +116,11 @@ const hideCard = () => {
   renderForm();
 
 };
+
+
+
+
+
 
 const startApp = document.querySelector(".startButton");
 startApp.addEventListener("click", hideCard);
