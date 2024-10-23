@@ -48,3 +48,12 @@ form{
   width: 700px;
   height: 700px;
 };
+
+.card3 {
+  margin-top: 20px;
+  text-align: center;
+  background-color: white;
+  border: 5px dotted black;
+  width: 700px;
+  height: 700px;
+};
