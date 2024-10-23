@@ -26,22 +26,22 @@ renderForm = () => {
   let domstring = "";
   domstring += 
   `<div id = "app">
-    <div class="card2" style="width: 1500px; height: 50px;">
+    <div class="card">
       <div class="card-body">
-        <form class="row g-3">
-          <div class="col-auto">
-            <label for="staticEmail2" class="visually-hidden">Student:</label>
-            <input type="text" readonly class="form-control-plaintext" id="staticEmail2" value="Student:">
-          </div>
-          <div class="col-auto">
-            <label for="inpuStudentName" class="visually-hidden">Name</label>
-            <input type="text" class="form-control" id="studentName" placeholder="Enter Name Here">
-          </div>
-          <div class="col-auto">
-            <button type="submit" class="btn btn-primary mb-3">Enroll</button>
-          </div>
+
+      <form>
+      <div class="mb-3 card3">
+      <label for="exampleInputStudent" class="form-label">Enter Student Name</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+      <div id="emailHelp" class="form-text">We'll never share your house with anyone else.</div>
       </div>
-        </form>
+    <div class="mb-3 form-check">
+    </div>
+    <button type="submit" class="btn btn-primary">Enroll</button>
+    </form>
+
+
+
     </div>
     
     <div id = "students">
@@ -89,10 +89,6 @@ const renderExpelled = () => {
     `<div class="card" style="width: 150px;">
       <div class="card-header">${card.name}</div>
       <img src=${card.imageUrl} class="card-img-top" alt="${card.id}">
-      <div class="card-body">
-       <button type="button" id="delete--${card.id}" class="delete-button btn btn-danger">Delete</button>
-      </div>
-      <div class=${card.house} "card-footer" >${card.house}</div>
       </div>`;
   });
 
