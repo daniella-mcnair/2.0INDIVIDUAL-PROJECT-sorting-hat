@@ -37,6 +37,7 @@ form{
   flex-direction: row;
   flex-wrap: wrap;
   column-gap: 10px;
+  justify-content: center;
 }
 
 .card2 {
@@ -44,6 +45,6 @@ form{
   text-align: center;
   background-color: white;
   border: 5px dotted black;
-  width: 500px;
-  height: 500px;
+  width: 700px;
+  height: 700px;
 };
