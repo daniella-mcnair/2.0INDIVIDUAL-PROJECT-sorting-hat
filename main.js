@@ -56,25 +56,27 @@ assignHouse = () => {
 
 // const formApp = document.querySelector("#app");
 
-const studentContainer = document.querySelector("#enrolled")
+
 
 const renderStudents = () => {
+  const studentContainer = document.querySelector("#enrolled")
   let studentString = "";
   students.forEach((student) => {
     studentString +=
     `<div class="card5" style="width: 150px;">
       <div class="card-header">${student.house}</div>
-      <img src=${student.imageUrl} class="card-img-top" alt="${student.id}">
+       <div class="card-body">
       <div class="card-body">
        
       </div>
       <div class=${student.name} "card-footer" >${student.name}</div>
       <button type="button" id="delete--${student.id}" class="delete-button btn btn-danger">Delete</button>
-      </div>`;
+      </div></div>`;
   });
 
   studentContainer.innerHTML = studentString;
-};  
+};
+
 
 //render exisitng expelled students
 
@@ -127,3 +129,74 @@ form.addEventListener("submit", createStudent);
 
 const startApp = document.querySelector(".startButton");
 startApp.addEventListener("click", hideCard);
+
+///filters
+
+const showALL = document.querySelector(".allBTN");
+const showGRF = document.querySelector(".grfBTN");
+const showHUFF = document.querySelector(".huffBTN");
+const showRAV = document.querySelector(".ravBTN");
+const showSLY = document.querySelector(".slyBTN");
+
+const allFilter = () =>  {
+renderStudents();
+};
+
+const grfFilter = () =>  {
+  let grfArray = [];
+  students.forEach((student) => {
+    if(students.house === "Griffyndor") {
+      grfArray.push(student);
+    }
+    renderStudents(grfArray);
+  });
+  };
+
+
+  const huffFilter = () =>  {
+    let huffArray = [];
+    students.forEach((student) => {
+      if(students.house === "Hufflepuff") {
+        huffArray.push(student);
+      }
+      renderStudents(huffArray);
+    });
+    };
+
+    const ravFilter = () =>  {
+      let ravArray = [];
+      students.forEach((student) => {
+        if(students.house === "Ravenclaw") {
+          ravArray.push(student);
+        }
+        renderStudents(ravArray);
+      });
+      };
+
+      const slyFilter = () =>  {
+        let slyArray = [];
+        students.forEach((student) => {
+          if(students.house === "Slytherin") {
+            slyArray.push(student);
+          }
+          renderStudents(slyArray);
+        });
+        };
+
+showALL.addEventListener("click", allFilter);
+showGRF.addEventListener("click", grfFilter);
+showHUFF.addEventListener("click", huffFilter);
+showRAV.addEventListener("click", ravFilter);
+showSLY.addEventListener("click", slyFilter);
+
+
+// render cards card instanceof `<div class="card5" style="width: 150px;">
+// <div class="card-header">${student.house}</div>
+//  <div class="card-body">
+// <img src=${student.imageUrl} class="card-img-top" alt="${student.id}">
+// <div class="card-body">
+ 
+// </div>
+// <div class=${student.name} "card-footer" >${student.name}</div>
+// <button type="button" id="delete--${student.id}" class="delete-button btn btn-danger">Delete</button>
+// </div></div>`;
