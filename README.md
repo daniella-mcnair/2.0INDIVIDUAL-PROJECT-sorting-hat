@@ -1,3 +1,6 @@
+Site is deployed at:
+mysortinghat2.netlify.app
+
 # Sorting Hat
 
 ## Goals
