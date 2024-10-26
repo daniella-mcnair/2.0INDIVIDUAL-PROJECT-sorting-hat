@@ -46,7 +46,7 @@ form{
   background-color: white;
   border: 5px dotted black;
   width: 700px;
-  height: 700px;
+  height: 1500px;
 };
 
 .card3 {
@@ -56,4 +56,31 @@ form{
   border: 5px dotted black;
   width: 700px;
   height: 700px;
+
+  .card5 {
+    text-align: center;
+    background-color: white;
+    border: 5px solid black;
+    width: 200px;
+    height: 200px;
+  };
+  
 };
+
+#students{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+#enrolled {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+#expelled {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
