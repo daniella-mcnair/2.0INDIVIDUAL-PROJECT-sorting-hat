@@ -1,6 +1,11 @@
 Site is deployed at:
 mysortinghat2.netlify.app
 
+Things learned
+-When trying something new, give yourself a lot of time to think it through.
+-Use branches for each task so it's easy to keep up and revert changes.
+-Set timelines for when certain things should be done.
+
 # Sorting Hat
 
 ## Goals
