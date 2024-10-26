@@ -87,7 +87,8 @@ const renderExpelled = () => {
   xStudents.forEach((student) => {
     expelstring +=
     `<div class="card5" style="width: 150px;">
-      <div class="card-header">${student.name}</div>
+      <div class="card-header">&#128531</div>
+      <div class="card-body">${student.name}</div>
       </div>`;
   });
 
@@ -183,11 +184,24 @@ const grfFilter = () =>  {
         });
         };
 
+        const expelled = document.querySelector("#students")
+        const expelStudent = (e)=> {
+          if(e.target.id.includes("delete")){
+            const[, id] = e.target.id.split("--")
+            const index = students.findIndex(obj => obj.id === Number(id));
+            students.splice(index,1)
+            return renderStudents(students);
+
+
+          }
+        }      
+
 showALL.addEventListener("click", allFilter);
 showGRF.addEventListener("click", grfFilter);
 showHUFF.addEventListener("click", huffFilter);
 showRAV.addEventListener("click", ravFilter);
 showSLY.addEventListener("click", slyFilter);
+expelled.addEventListener("click", expelStudent);
 
 
 // render cards card instanceof `<div class="card5" style="width: 150px;">
