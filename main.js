@@ -189,9 +189,11 @@ const grfFilter = () =>  {
           if(e.target.id.includes("delete")){
             const[, id] = e.target.id.split("--")
             const index = students.findIndex(obj => obj.id === Number(id));
-            students.splice(index,1)
-            return renderStudents(students);
+            students.splice(index,1);
+            xStudents.push(students);
 
+            renderStudents(students);
+            renderExpelled();
 
           }
         }      
